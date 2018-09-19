@@ -1,0 +1,47 @@
+body { padding: 0;  margin: 0; font-family:Open Sans; }
+
+/**header**/
+.header .bg-up {width: 70%;margin:0 auto;}
+.header {height: 30%;width:100%;background:#162eac;}
+.header .bg-down{width:80%;margin:0 auto}
+.header .logo{float: left;}
+.header .nav-logo{height: 50px;padding: 30px 0px;}
+.header .nav_menu{float: right;margin-top:30px;}
+.header .nav_menu a{color:white;font-weight: bold;}
+.header .nav_menu a:hover{color:#0bbe98;cursor:pointer}
+.header .head-title{display: table;margin-bottom: 50px;}
+.header .head-title .title-left{width: 50%;color:white;display: table-cell;vertical-align: middle;}
+.header .head-title .title-left button{ background: #00c499;  padding: 6px;  border-radius: 20px;  width: 125px;  border: none; border: 2px solid #00c499; line-height: 23px;  color: white;  }
+.header .head-title .title-left button:hover{ background:#162eac;border: 2px solid #00c499;cursor:pointer}
+.header .logo img{vertical-align: middle}
+/**header**/
+
+/**main**/
+.main{width: 70%;margin: 0 auto;margin-bottom: 50px;}
+.main .main-line{ width: 50px;  height: 3px;  background: #00c499;  margin: 0 auto;  margin-bottom: 30px;}
+.main .main-title h4{color: #706d7e;font-weight: bold;text-align: center; margin-top: 50px;}
+.main .accordion-heading{text-align:center;display: table;width: 100%;border: 2px solid #f7f3f3 !important;box-shadow: 0px 0px 2px #f7f3f3;}
+.main .accordion-heading .accordion-toggle{line-height: 40px;/* width: 50%; */text-align: left;}
+.main .accordion-heading .accordion-h4{color: #706d7e;font-weight: bold;float: left;width:50%}
+.main .accordion-heading .accordion-step{display: table-cell;vertical-align: middle;text-align: left;padding-left: 20px;color: #00c499;float: left;width: 45%;}
+.main .step1{background:url("../../assets/image/all-exercises.png") 0 0;width:120px;height:120px;margin: 0px 60px 0px 0px;}
+.main .step2{background:url("../../assets/image/all-exercises.png") 400px 0;width:120px;height:120px;margin: 0px 60px 0px 0px;}
+.main .step3{background:url("../../assets/image/all-exercises.png") 280px -10px;width:120px;height:120px;margin: 0px 60px 0px 0px;}
+.main .step4{background:url("../../assets/image/all-exercises.png") 120px 0;width:120px;height:120px;margin: 0px 60px 0px 0px;}
+.main .step5{background:url("../../assets/image/all-exercises.png") 0 380px;width:120px;height:120px;margin: 0px 60px 0px 0px;}
+.main .step6{background:url("../../assets/image/all-exercises.png") 420px 365px;width:120px;height:120px;margin: 0px 60px 0px 0px;}
+.main .step7{background:url("../../assets/image/all-exercises.png") 280px 380px;width:120px;height:120px;margin: 0px 60px 0px 0px;}
+.main .step8{background:url("../../assets/image/all-exercises.png") 120px 360px;width:120px;height:120px;margin: 0px 60px 0px 0px;}
+.main .step9{background:url("../../assets/image/all-exercises.png") 0 180px;width:120px;height:120px;margin: 0px 60px 0px 0px;}
+.main .step10{background:url("../../assets/image/all-exercises.png") 420px 180px;width:120px;height:120px;margin: 0px 60px 0px 0px;}
+.main .step11{background:url("../../assets/image/all-exercises.png") 282px 185px;width:120px;height:120px;margin: 0px 60px 0px 0px;}
+.main .step12{background:url("../../assets/image/all-exercises.png") 125px 178px;width:120px;height:120px;margin: 0px 60px 0px 0px;}
+.main .accordion-inner{display: inline-flex;}
+.main .accordion-inner .circle-clock{width: 110px;height: 110px;border-radius: 55px;border:2px solid #f5f5f5;margin: 10px 0px;}
+.main .accordion-inner .circle-clock p:first-child{margin-top: 17px}
+.main .accordion-body{text-align:center}
+/**main**/
+
+/**footer**/
+.footer{height:50px;background: #f2f2f2;width:100%;}
+/**footer**/

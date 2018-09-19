@@ -1,0 +1,69 @@
+<div class="header">
+  <div class="bg-up">
+    <div class="nav-logo">
+      <a class="logo" href="#">
+        <img src="../../assets/image/logo.png">
+      </a>
+      <div class="nav_menu">
+        <a *ngFor="let link of headLink" routerLink="{{link.href}}"> {{link.text}} </a>
+      </div>
+    </div>
+    <div class="head-title">
+      <div class="title-left">
+        <h1>KEEP YOURSELF HEALTHY WITH OUR HEALTHCARE APP.</h1>
+        <h4>Invest in your health early to make a better life for you and you family.</h4>
+        <button ng-click="">STARTNOW</button>
+        <button ng-click="">LEARN MORE</button>
+      </div>
+      <div class="img-right">
+        <img src="../../assets/image/watering.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="main-title">
+    <h4>KNOW ABOUT 7-MINUTE DAILY WORKOUT</h4>
+    <hr class="main-line">
+  </div>
+
+  <div class="portlet-body">
+    <div class="accordion" id="accordion1">
+
+      <div class="accordion-group" *ngFor="let accordion of accordions, let i = index" (click)="toggleDiv(i)">
+        <div class="accordion-heading">
+          <!--<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_{{i}}">-->
+          <a class="accordion-toggle collapsed" data-parent="#accordion1">
+            <h4 class="accordion-step">STEP{{i+1}}</h4>
+            <h4 class="accordion-h4">{{accordion.h4}}</h4>
+          </a>
+        </div>
+        <div id="collapse_{{i}}" class="accordion-body collapse" [ngClass]="{'in': showIndex == i}">
+          <div class="accordion-inner">
+            <div class="step{{i+1}}"></div>
+            <div class="circle-clock">
+              <p>Count Down</p>
+              <h4>{{countDown}}</h4>
+              <p>Seconds</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <ul>
+    <li>Healthify @2018</li>
+    <li>Blogs</li>
+    <li class="font_top_i">|</li>
+    <li>Privacy Policy</li>
+    <li class="font_top_i">|</li>
+    <li>Terms of Use</li>
+    <li class="font_top_i">|</li>
+    <li>Contact Us</li>
+  </ul>
+</div>
