@@ -7,11 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { FruitComponent } from './fruit/fruit.component';
+import { StatusComponent } from './status/status.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FruitComponent
+    FruitComponent,
+    StatusComponent
   ],
   imports: [
     BrowserModule,

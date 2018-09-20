@@ -63,7 +63,7 @@ export class FruitComponent implements OnInit {
     }
   ];
   showIndex = 0;
-  countDown = 10;
+  countDown = 30;
   countInterval = null;
 
   constructor() { }
@@ -84,7 +84,7 @@ export class FruitComponent implements OnInit {
         if (this.showIndex > 11) {
           return;
         }
-        this.countDown = 10;
+        this.countDown = 30;
         this.showIndex ++;
         this.count();
         return;
@@ -96,7 +96,7 @@ export class FruitComponent implements OnInit {
   toggleDiv(i): void {
     clearInterval(this.countInterval);
     this.showIndex = i;
-    this.countDown = 10;
+    this.countDown = 30;
     this.count();
     console.log('toggle', i);
   }

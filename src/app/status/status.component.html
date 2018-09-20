@@ -1,0 +1,155 @@
+<div class="header">
+  <div class="bg-up">
+    <div class="nav-logo">
+      <a class="logo" href="#">
+        <img src="../../assets/image/logo.png">
+      </a>
+      <div class="nav_menu">
+        <a *ngFor="let link of headLink" routerLink="{{link.href}}"> {{link.text}} </a>
+      </div>
+    </div>
+    <div class="head-title">
+      <div class="title-left">
+        <h1>KEEP YOURSELF HEALTHY WITH OUR HEALTHCARE APP.</h1>
+        <h4>Invest in your health early to make a better life for you and you family.</h4>
+        <button ng-click="">STARTNOW</button>
+        <button ng-click="">LEARN MORE</button>
+      </div>
+      <div class="img-right">
+        <img src="../../assets/image/watering.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="main-charts">
+    <div id="dashboard">
+      <div class="row-fluid">
+        <div class="span4 responsive" data-tablet="span4" data-desktop="span4">
+          <div class="dashboard-stat">
+            <p class="more">TOTAL VISITS</p>
+            <div class="visual">
+              <img src="../../assets/image/line-green.jpg">
+              <button>+10%</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="span4 responsive" data-tablet="span4" data-desktop="span4">
+          <div class="dashboard-stat">
+            <p class="more">TOTAL EXERCISED</p>
+            <div class="visual">
+              <img src="../../assets/image/line.jpg">
+              <button class="btn-pink">+10%</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="span4 responsive" data-tablet="span4  fix-offset" data-desktop="span4">
+          <div class="dashboard-stat">
+            <p class="more">TOTAL REGISTERED</p>
+            <div class="visual">
+              <img src="../../assets/image/line-blue.jpg">
+              <button class="btn-green">+10%</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid" id="siteVisits">
+        <div class="span8">
+          <div class="col-lg-7 col-md-12 col-xs-12">
+            <div class="main-box">
+              <header class="main-box-header clearfix">
+                <h2 class="pull-left">Site Visits</h2>
+                <div class="icon-box pull-right">
+                  <a href="#" class="btn pull-left">
+                    <i class="fa fa-refresh"></i>
+                  </a>
+                  <a href="#" class="btn pull-left">
+                    <i class="fa fa-cog"></i>
+                  </a>
+                </div>
+              </header>
+              <div class="main-box-body clearfix">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div id="world-map"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="span4" id="siteVisitUSA">
+          <div class="portlet box blue">
+            <div class="portlet-body">
+              <div class="skills-top">
+                <h5>100K</h5>
+                <h4>50%</h4>
+                <div class="clearfix"></div>
+                <div class="portlet-title">
+                  <div class="caption">Visitor from USA</div>
+                </div>
+                <div class="skills">
+                  <div class="skill" style="width:50%"></div>
+                </div>
+              </div>
+              <div class="skills-top">
+                <h5>50K</h5>
+                <h4>25%</h4>
+                <div class="clearfix"></div>
+                <div class="portlet-title">
+                  <div class="caption">Visitor from USA</div>
+                </div>
+                <div class="skills">
+                  <div class="skill" style="width:25%"></div>
+                </div>
+              </div>
+              <div class="portlet box purple">
+                <div class="row-fluid portlet-circle">
+                  <div class="easy-pie-chart">
+                    <div class="span4">
+                      <div class="number transactions" data-percent="75"><span>75</span>%</div>
+                      <a class="title" href="#">New Users <i class="m-icon-swapright"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="margin-bottom-10 visible-phone"></div>
+                  <div class="span4">
+                    <div class="easy-pie-chart">
+                      <div class="number visits" data-percent="50"><span>50</span>%</div>
+                      <a class="title" href="#">New Purchase <i class="m-icon-swapright"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="margin-bottom-10 visible-phone"></div>
+                  <div class="span4">
+                    <div class="easy-pie-chart">
+                      <div class="number bounce" data-percent="90"><span>90</span>%</div>
+                      <a class="title" href="#">Bounced <i class="m-icon-swapright"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row-fluid" id="stats">
+        <div class="span8">
+          <div id="myLineChart"></div>
+        </div>
+        <div class="span4">
+          <h4>Most Exercised Step</h4>
+          <div class="status-step1"></div>
+          <p>Jumping Jacks</p>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+</div>
