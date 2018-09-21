@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import * as $ from 'jquery';
+declare var $: any;
 
 @Component({
   selector: 'app-status',
@@ -187,6 +187,16 @@ export class StatusComponent implements OnInit {
     'ZM': 15.69,
     'ZW': 5.57
   };
+  layoutColorCodes = {
+    'blue': '#4b8df8',
+    'red': '#e02222',
+    'green': '#35aa47',
+    'purple': '#852b99',
+    'grey': '#555555',
+    'light-grey': '#fafafa',
+    'yellow': '#ffb848'
+  };
+  // chart
   chartOption = {
     title: {
       text: 'Mounthy Stats',
@@ -230,20 +240,20 @@ export class StatusComponent implements OnInit {
 
     ]
   };
-  // chart demo
   chartOptions = {
     responsive: true
   };
   chartData = [
-    { data: [330, 600, 260, 700], label: 'Account A' },
-    { data: [120, 455, 100, 340], label: 'Account B' },
-    { data: [45, 67, 800, 500], label: 'Account C' }
+    { data: [1, 3, 9, 27, 1, 7, 7], label: 'Appl' },
+    { data: [1, 2, 4, 8, 16, 32, 64], label: 'average' }
   ];
-  chartLabels = ['January', 'February', 'Mars', 'April'];
+  chartLabels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
   constructor() { }
 
   ngOnInit() {
+    // this.initMiniCharts();
+    // $('body').html('color blue');
     // App.init(); // initlayout and core plugins
     // Index.initCharts(); // init index page's custom scripts
     // Index.initChat();
@@ -298,5 +308,42 @@ export class StatusComponent implements OnInit {
     //     el.html(el.html() + ' (' + this.gdpData[code] + ')');
     //   }
     // });
+  }
+  initMiniCharts() {
+    $('.easy-pie-chart .number.transactions').easyPieChart({
+      animate: 1000,
+      size: 75,
+      lineWidth: 3,
+      barColor: this.getLayoutColorCode('yellow')
+    });
+
+    $('.easy-pie-chart .number.visits').easyPieChart({
+      animate: 1000,
+      size: 75,
+      lineWidth: 3,
+      barColor: this.getLayoutColorCode('green')
+    });
+
+    $('.easy-pie-chart .number.bounce').easyPieChart({
+      animate: 1000,
+      size: 75,
+      lineWidth: 3,
+      barColor: this.getLayoutColorCode('red')
+    });
+
+    $('.easy-pie-chart-reload').click(function(){
+      $('.easy-pie-chart .number').each(function() {
+        const newValue = Math.floor(100 * Math.random());
+        $(this).data('easyPieChart').update(newValue);
+        $('span', this).text(newValue);
+      });
+    });
+  }
+  getLayoutColorCode(name) {
+    if (this.layoutColorCodes[name]) {
+      return this.layoutColorCodes[name];
+    } else {
+      return '';
+    }
   }
 }
