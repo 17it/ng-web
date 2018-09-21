@@ -187,6 +187,59 @@ export class StatusComponent implements OnInit {
     'ZM': 15.69,
     'ZW': 5.57
   };
+  chartOption = {
+    title: {
+      text: 'Mounthy Stats',
+      left: 'center'
+    },
+    tooltip: {
+      trigger: 'item',
+      formatter: '{a} <br/>{b} : {c}'
+    },
+    legend: {
+      left: 'left',
+      data: ['Appl', 'average']
+    },
+    xAxis: {
+      type: 'category',
+      name: 'x',
+      splitLine: {show: false},
+      data: ['January', 'February', 'March', 'April', 'May', 'June', 'July']
+    },
+    grid: {
+      left: '10%',
+      right: '10%',
+      bottom: '15%',
+
+    },
+    yAxis: {
+      type: 'log',
+      name: 'y'
+    },
+    series: [
+      {
+        name: 'Appl',
+        type: 'line',
+        data: [1, 3, 9, 27, 1, 7, 7]
+      },
+      {
+        name: 'average',
+        type: 'line',
+        data: [1, 2, 4, 8, 16, 32, 64]
+      },
+
+    ]
+  };
+  // chart demo
+  chartOptions = {
+    responsive: true
+  };
+  chartData = [
+    { data: [330, 600, 260, 700], label: 'Account A' },
+    { data: [120, 455, 100, 340], label: 'Account B' },
+    { data: [45, 67, 800, 500], label: 'Account C' }
+  ];
+  chartLabels = ['January', 'February', 'Mars', 'April'];
 
   constructor() { }
 
@@ -194,10 +247,12 @@ export class StatusComponent implements OnInit {
     // App.init(); // initlayout and core plugins
     // Index.initCharts(); // init index page's custom scripts
     // Index.initChat();
+
     // Index.initMiniCharts();
     // Charts.init();
     // Charts.initCharts();
     // initLineChart();
+
     // $('#world-map').vectorMap({
     //   map: 'world_merc_en',
     //   backgroundColor: '#ffffff',
@@ -243,55 +298,5 @@ export class StatusComponent implements OnInit {
     //     el.html(el.html() + ' (' + this.gdpData[code] + ')');
     //   }
     // });
-  }
-
-  initLineChart(i): void {
-    // 基于准备好的dom，初始化echarts图表
-    // const myChart = echarts.init(document.getElementById('myLineChart'));
-    // const option = {
-    //   title: {
-    //     text: 'Mounthy Stats',
-    //     left: 'center'
-    //   },
-    //   tooltip: {
-    //     trigger: 'item',
-    //     formatter: '{a} <br/>{b} : {c}'
-    //   },
-    //   legend: {
-    //     left: 'left',
-    //     data: ['Appl', 'average']
-    //   },
-    //   xAxis: {
-    //     type: 'category',
-    //     name: 'x',
-    //     splitLine: {show: false},
-    //     data: ['January', 'February', 'March', 'April', 'May', 'June', 'July']
-    //   },
-    //   grid: {
-    //     left: '10%',
-    //     right: '10%',
-    //     bottom: '15%',
-    //
-    //   },
-    //   yAxis: {
-    //     type: 'log',
-    //     name: 'y'
-    //   },
-    //   series: [
-    //     {
-    //       name: 'Appl',
-    //       type: 'line',
-    //       data: [1, 3, 9, 27, 1, 7, 7]
-    //     },
-    //     {
-    //       name: 'average',
-    //       type: 'line',
-    //       data: [1, 2, 4, 8, 16, 32, 64]
-    //     },
-    //
-    //   ]
-    // };
-
-    // myChart.setOption(option);
   }
 }

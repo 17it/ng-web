@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { FruitComponent } from './fruit/fruit.component';
@@ -17,6 +18,7 @@ import { StatusComponent } from './status/status.component';
   ],
   imports: [
     BrowserModule,
+    ChartsModule,
     FormsModule,
     HttpModule,
     AppRoutingModule

@@ -140,7 +140,17 @@
 
       <div class="row-fluid" id="stats">
         <div class="span8">
-          <div id="myLineChart"></div>
+          <div id="myLineChart">
+            <canvas
+              baseChart
+              [chartType]="'line'"
+              [datasets]="chartData"
+              [labels]="chartLabels"
+              [options]="chartOptions"
+              [legend]="false">
+            </canvas>
+          </div>
+          <!--<div id="myLineChart"></div>-->
         </div>
         <div class="span4">
           <h4>Most Exercised Step</h4>
@@ -151,5 +161,4 @@
       <div class="clearfix"></div>
     </div>
   </div>
-
 </div>
